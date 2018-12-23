@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: #003380;
+  background-color: #131414;
   color: #fff;
   font-size: 1.6rem;
   position: relative;
@@ -56,4 +56,10 @@ button {
   &:focus {
     outline: none;
   }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

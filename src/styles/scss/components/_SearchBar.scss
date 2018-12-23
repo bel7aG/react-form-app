@@ -1,9 +1,53 @@
 .search-bar {
-  label {
-    display: flex;
-    &-input {
-      display: block;
+  height: 12rem;
+  padding: 0 8rem;
+  border-bottom: 1px solid rgb(74, 75, 78);
+  border-radius: 0 0 0 6rem;
+
+  form {
+    height: 100%;
+
+
+    .search-name {
+
+      height: 5rem;
+      height: 5rem;
+
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      font-family: sans-serif;
+    }
+
+    .search-bar-input {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #333;
+      padding: 0 1rem;
+      width: 100%;
+      margin-top: 1.4rem;
+      border: 0;
+      height: 4.2rem;
+      border-radius: 4px;
+      transition: all .1s;
+
+      &:focus {
+        letter-spacing: 1px;
+        outline: none;
+      }
+
+      &::placeholder{
+        font-size: 2rem;
+        letter-spacing: 2vw;
+        transition: color .72s .2s, letter-spacing .3s ;
+      }
+
+      &:focus::placeholder {
+        letter-spacing: 1px;
+        color: #fff;
+      }
 
     }
+
   }
+
 }

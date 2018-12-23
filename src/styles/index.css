@@ -8,7 +8,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  background-color: #003380;
+  background-color: #131414;
   color: #fff;
   font-size: 1.6rem;
   position: relative; }
@@ -43,7 +43,42 @@ button {
   button:focus {
     outline: none; }
 
-.search-bar label {
-  display: flex; }
-  .search-bar label-input {
-    display: block; }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.search-bar {
+  height: 12rem;
+  padding: 0 8rem;
+  border-bottom: 1px solid #4a4b4e;
+  border-radius: 0 0 0 6rem; }
+  .search-bar form {
+    height: 100%; }
+    .search-bar form .search-name {
+      height: 5rem;
+      height: 5rem;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      font-family: sans-serif; }
+    .search-bar form .search-bar-input {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #333;
+      padding: 0 1rem;
+      width: 100%;
+      margin-top: 1.4rem;
+      border: 0;
+      height: 4.2rem;
+      border-radius: 4px;
+      transition: all .1s; }
+      .search-bar form .search-bar-input:focus {
+        letter-spacing: 1px;
+        outline: none; }
+      .search-bar form .search-bar-input::placeholder {
+        font-size: 2rem;
+        letter-spacing: 2vw;
+        transition: color .72s .2s, letter-spacing .3s; }
+      .search-bar form .search-bar-input:focus::placeholder {
+        letter-spacing: 1px;
+        color: #fff; }

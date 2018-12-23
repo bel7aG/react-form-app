@@ -1,10 +1,9 @@
 import React from 'react'
-import { SearchBar, NavBar } from '../'
+import { SearchBar } from '../'
 
 const App = () => {
   return (
     <div>
-      <NavBar />
       <SearchBar />
     </div>
   )
