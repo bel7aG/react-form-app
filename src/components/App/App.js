@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { Component } from 'react'
+import axios from 'axios'
 import { SearchBar } from '../'
 
-const App = () => {
-  return (
-    <div>
-      <SearchBar />
-    </div>
-  )
-}
+export default class App extends Component {
+  
+  handleFormSubmit = (term) => {
+    axios.get('https://api.unsplash.com/search/photos', {
+      params: {
+        query: term
+      },
+      headers: {
+        Authorization: 'Client-ID 3f9a2cacd0cb48e872e4d9e5bfa722c5a0e109bf79d968d308a258ef25061462'
+      }
+    })
+  }
 
-export default App
+  render() {
+    return (
+      <div className="container">
+        <SearchBar onSubmit={this.handleFormSubmit} />
+      </div>
+    )
+  }
+}
