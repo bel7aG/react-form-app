@@ -8,7 +8,6 @@ export default class SearchBar extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault()
-    console.log(this)
   }
 
   render() {
