@@ -2,6 +2,7 @@
   "name": "react-form-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bel7aG.github.io/react-form-app",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass-chokidar": "^1.3.4",

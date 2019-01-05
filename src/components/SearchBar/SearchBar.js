@@ -2,22 +2,32 @@ import React, { Component } from 'react'
 
 export default class SearchBar extends Component {
 
-  handleInputChange = (event) => {
-    console.log(event.target.value)
+  state = {
+    term: ''
+  }
+
+  handleFormSubmit = (event) => {
+    event.preventDefault()
+    console.log(this)
   }
 
   render() {
     return (
       <div className="search-bar">
-        <form>
+        <form onSubmit={this.handleFormSubmit}>
           <label htmlFor="search-bar-input" className="search-name flex-center">Search</label>
           <input
             type="text"
             className="search-bar-input flex-center"
             placeholder="search"
-            onChange={this.handleInputChange}
+            value={this.state.term}
+            onChange={(event) => {
+              this.setState({term: event.target.value})
+              console.log(this.state.term)
+            }}
           />
         </form>
+        <h1>{this.state.term}</h1>
       </div>
     );
   }

@@ -48,6 +48,9 @@ button {
   justify-content: center;
   align-items: center; }
 
+h1 {
+  overflow-y: auto; }
+
 .search-bar {
   height: 12rem;
   padding: 0 8rem;
