@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import unsplash from 'Api/unsplash'
-import { SearchBar, Images } from '../'
+import { SearchBar, ListImage } from '../'
 
 export default class App extends Component {
   
@@ -30,7 +30,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <SearchBar onSubmit={this.handleFormSubmit} />
-        <Images images={this.state.images} />
+        {this.state.images.length === 0 ? "ok" : <ListImage images={this.state.images} />}
       </div>
     )
   }

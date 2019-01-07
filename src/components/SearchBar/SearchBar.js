@@ -14,6 +14,9 @@ export default class SearchBar extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault()
     this.props.onSubmit(this.state.term);
+    this.setState({
+      term: ''
+    })
   }
   
 
@@ -21,7 +24,6 @@ export default class SearchBar extends Component {
     return (
       <div className="search-bar">
         <form onSubmit={this.handleFormSubmit}>
-          <label htmlFor="search-bar-input" className="search-name flex-center">Search</label>
           <input
             type="text"
             className="search-bar-input flex-center"
@@ -30,7 +32,6 @@ export default class SearchBar extends Component {
             onChange={this.handleInput}
           />
         </form>
-        <h1>{this.state.term}</h1>
       </div>
     );
   }

@@ -8,7 +8,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  background-color: #131414;
+  background-color: #fff;
   color: #fff;
   font-size: 1.6rem;
   position: relative; }
@@ -52,45 +52,44 @@ h1 {
   overflow-y: auto; }
 
 .search-bar {
-  height: 12rem;
-  padding: 0 8rem;
-  border-bottom: 1px solid #4a4b4e;
-  border-radius: 0 0 0 6rem; }
-  .search-bar form {
-    height: 100%; }
-    .search-bar form .search-name {
-      height: 5rem;
-      height: 5rem;
-      font-size: 2.2rem;
-      letter-spacing: 2px;
-      font-family: sans-serif; }
-    .search-bar form .search-bar-input {
-      font-size: 2rem;
+  position: relative;
+  background-color: #d9bd00;
+  color: #000;
+  height: 10rem;
+  padding: 3rem 4rem;
+  box-shadow: 0 0 3rem #000; }
+  .search-bar-input {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #aff2fe;
+    background-color: #d9bd00;
+    padding: 7px 1rem;
+    width: 70%;
+    height: 4rem;
+    margin: 0 auto;
+    border-radius: 0 0 6rem 0;
+    border: 0;
+    border-bottom: 1rem solid #f6af5c;
+    box-shadow: inset -2rem -1rem 2px #ed8877;
+    transition: all .7s, transform .4s; }
+    .search-bar-input:focus {
       letter-spacing: 1px;
-      color: #333;
-      padding: 0 1rem;
-      width: 100%;
-      margin-top: 1.4rem;
-      border: 0;
-      height: 4.2rem;
-      border-radius: 4px;
-      transition: all .1s; }
-      .search-bar form .search-bar-input:focus {
-        letter-spacing: 1px;
-        outline: none; }
-      .search-bar form .search-bar-input::placeholder {
-        font-size: 2rem;
-        letter-spacing: 2vw;
-        transition: color .72s .2s, letter-spacing .3s; }
-      .search-bar form .search-bar-input:focus::placeholder {
-        letter-spacing: 1px;
-        color: #fff; }
+      outline: none;
+      transform: rotate(-1.12deg);
+      border-bottom: 1rem solid #ed8877;
+      box-shadow: inset -3px -1rem 2px #f6af5c; }
+    .search-bar-input::placeholder {
+      color: #bbf1fc;
+      text-shadow: 1px 1px 2px #333;
+      font-size: 2rem;
+      letter-spacing: 2vw;
+      transition: color .72s .2s, letter-spacing .3s; }
+    .search-bar-input:focus::placeholder {
+      letter-spacing: 1px;
+      color: #fff; }
 
 .images {
-  max-height: calc(100vh - 12rem);
-  position: relative; }
-  .images-list {
-    width: inherit;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr); }
+  position: relative;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #111; }

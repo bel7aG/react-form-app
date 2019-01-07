@@ -1,15 +1,10 @@
 .images {
-  max-height: calc(100vh - 12rem);
   position: relative;
-  
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #111;  
   &-list {
-    width: inherit;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr); 
-    
-    > li.image {
-    }
+
     
   }
   
