@@ -1,0 +1,44 @@
+.image-list {
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-gap: 1rem 2rem;
+    
+    > .image-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      > img {
+        animation: in 4s;
+        opacity: .8;
+        padding: 3px;
+        background-color: #444;
+        width: 100%;
+        transition: all .2s;
+      }
+      
+      > img {
+        padding: 0;
+        opacity: 1;
+        cursor: pointer;
+      }
+      
+    }
+  }
+}
+
+
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

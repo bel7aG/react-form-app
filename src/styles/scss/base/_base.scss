@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-color: #fff;
   color: #fff;
   font-size: 1.6rem;
@@ -20,7 +21,6 @@ body {
 
 body, .container, #root {
   height: 100%;
-
 }
 
 * {
