@@ -28,7 +28,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <SearchBar onSubmit={this.handleFormSubmit} />
-        {this.state.images.length === 0 ? <h1 style={{ color: 'red' }}>loading...</h1> : <ImageList images={this.state.images} />}
+        {this.state.images.length === 0 ? <div className="empty"><h1>Hi</h1></div> : <ImageList images={this.state.images} />}
       </div>
     )
   }

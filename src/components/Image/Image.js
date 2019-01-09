@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
+import { Spinner } from '../'
 
 export default class Image extends Component {
   constructor(props) {
     super(props)
-    
+
     this.state = {
-      isLoaded: true
+      isLoaded: true,
+      spans: 0
     }
     
     this.imageRef = React.createRef()
@@ -22,15 +24,10 @@ export default class Image extends Component {
       })
     })
   }
-  
 
   renderContent = () => {
-  }
-
-  render() {
     const { urls, description } = this.props.image
     const className = this.props.className
-    
     if (this.state.isLoaded) {
       return (
         <li className={className}>
@@ -38,6 +35,14 @@ export default class Image extends Component {
         </li>
       )
     }
-    return <h1 style={{color: "#f00"}}>loaded</h1>
+
+    return <Spinner style={{ height: this.imageRef.current.clientHeight }}/>
   }
-}
+  
+  render() {
+    return this.renderContent()
+  }
+  
+}    
+
+
